@@ -38,7 +38,7 @@ public class Microwave : MonoBehaviour
             if(currentTime > cookTime)
             {
                 overcooked = true;
-                myLight.color = Color.Lerp(Color.green, Color.red , currentTime/explodeTime);
+                myLight.color = Color.Lerp(Color.green, Color.red , (currentTime - cookTime)/(explodeTime - cookTime));
                 lightSpeed += Time.deltaTime*5;
             }
             if (myLight.intensity < maxIntensity && lightUp)

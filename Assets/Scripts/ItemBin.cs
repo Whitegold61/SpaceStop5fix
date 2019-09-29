@@ -27,5 +27,7 @@ public class ItemBin : MonoBehaviour
         givenItem.transform.parent = player.transform;
         player.GetComponent<TempPlayerMove>().heldItem = givenItem;
         player.GetComponent<TempPlayerMove>().isHolding = true;
+
+        Debug.Log("WE GOT HERE!!!");
     }
 }

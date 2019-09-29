@@ -69,7 +69,7 @@ public class TempPlayerMove : MonoBehaviour
 
     public void InteractWith()
     {
-        if (Physics.Raycast(new Vector3(this.transform.position.x, this.transform.position.y - .4f, this.transform.position.z), this.transform.forward, out hit, interactRange))
+        if (Physics.Raycast(new Vector3(this.transform.position.x, this.transform.position.y - .3f, this.transform.position.z), this.transform.forward, out hit, interactRange))
         {
             if(hit.transform.gameObject.GetComponent<ShipGateSwitch>() != null)
             {
@@ -97,6 +97,8 @@ public class TempPlayerMove : MonoBehaviour
 
             if (hit.transform.gameObject.GetComponent<ItemBin>() != null)
             {
+
+                Debug.Log("DETECTED");
                 hit.transform.gameObject.GetComponent<ItemBin>().GiveItem(this.gameObject);
             }
         }

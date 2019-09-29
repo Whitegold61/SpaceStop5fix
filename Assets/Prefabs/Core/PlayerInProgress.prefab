@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a9d5ef7417ceb74ab0ff25a330b75ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNumber: 2
+  playerNumber: 1
   movementSpeed: 3
   interactRange: 2
   isHolding: 0

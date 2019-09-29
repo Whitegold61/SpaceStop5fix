@@ -24,7 +24,7 @@ public class SessionManager : MonoBehaviour
     void Update()
     {
         countDownTime -= Time.deltaTime;
-        countDownText.text = Mathf.Round(countDownTime).ToString();
+        //countDownText.text = Mathf.Round(countDownTime).ToString();
 
     }
 
