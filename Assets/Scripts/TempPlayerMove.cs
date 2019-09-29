@@ -26,7 +26,7 @@ public class TempPlayerMove : MonoBehaviour
     void Start()
     {
         anime = GetComponent<Animator>();
-        mainCam = Camera.main;//GameObject.Find("Main Camera")
+        //mainCam = Camera.main;//GameObject.Find("Main Camera")
     }
 
     // Update is called once per frame
@@ -35,19 +35,19 @@ public class TempPlayerMove : MonoBehaviour
         if (!isSeated)
         {
             //Player Movement
-            //Vector3 movement = new Vector3( Input.GetAxisRaw(playerNumber + "Horizontal"), 0f, Input.GetAxisRaw(playerNumber + "Vertical"));
-            //movement.Normalize();
-            //transform.position += movement * Time.deltaTime * movementSpeed * SessionManager.speedMultiplier;
-            playerMovement();
+            Vector3 movement = new Vector3( Input.GetAxisRaw(playerNumber + "Horizontal"), 0f, Input.GetAxisRaw(playerNumber + "Vertical"));
+            movement.Normalize();
+            this.transform.position += movement * Time.deltaTime * movementSpeed * SessionManager.speedMultiplier;
+            //playerMovement();
 
-            /* 
-            Vector3 lookDirection = movement;//new Vector3(Input.GetAxisRaw(playerNumber + "Horizontal"), 0, Input.GetAxisRaw(playerNumber + "Vertical"));
+             
+            Vector3 lookDirection = new Vector3(Input.GetAxisRaw(playerNumber + "Horizontal"), 0, Input.GetAxisRaw(playerNumber + "Vertical"));
             if (lookDirection != new Vector3(0, 0, 0))
             {
                 transform.rotation = Quaternion.LookRotation(lookDirection);
                 
             }
-            */
+            
             if (Input.GetButtonDown(playerNumber + "Interact"))
             {
                 if (!isHolding)
@@ -56,6 +56,7 @@ public class TempPlayerMove : MonoBehaviour
                 }
                 else if(isHolding)
                 {
+                    heldItem.transform.rotation = this.transform.rotation;
                     heldItem.transform.parent = null;
                     heldItem.GetComponent<BoxCollider>().enabled = true;
                     heldItem.GetComponent<Rigidbody>().isKinematic = false;
@@ -68,11 +69,11 @@ public class TempPlayerMove : MonoBehaviour
 
     public void InteractWith()
     {
-        if (Physics.Raycast(new Vector3(this.transform.position.x, this.transform.position.y - .2f, this.transform.position.z), this.transform.forward, out hit, interactRange))
+        if (Physics.Raycast(new Vector3(this.transform.position.x, this.transform.position.y - .4f, this.transform.position.z), this.transform.forward, out hit, interactRange))
         {
             if(hit.transform.gameObject.GetComponent<ShipGateSwitch>() != null)
             {
-                hit.transform.gameObject.GetComponent<ShipGateSwitch>().ShipGateSwithOn();
+                hit.transform.gameObject.GetComponent<ShipGateSwitch>().ShipGateSwitchOn();
             }
             
             if (hit.transform.gameObject.GetComponent<Item>() != null)
@@ -99,6 +100,7 @@ public class TempPlayerMove : MonoBehaviour
             }
         }
     }
+/*
     void playerMovement(){
 
         groundNormal = GameObject.Find("Ground").transform.up;
@@ -126,4 +128,5 @@ public class TempPlayerMove : MonoBehaviour
        
         Debug.Log(movement);
     }
+    */
 }
