@@ -8,8 +8,9 @@ public class ShipGateSwitch : MonoBehaviour
 
     public bool isShipGateSwitch = false;
 
-    public void ShipGateSwithOn()
+    public void ShipGateSwitchOn()
     {
         isShipGateSwitch = true;
     }
+
 }
