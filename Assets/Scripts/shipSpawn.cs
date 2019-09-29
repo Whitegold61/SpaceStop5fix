@@ -11,6 +11,7 @@ public class shipSpawn : MonoBehaviour
     public GameObject[] shipArray = new GameObject[4];
     public bool canSpawn = true;
     public int[] randships = new int[4];
+    public int shipsOut;
 
 
     // Start is called before the first frame update
@@ -70,6 +71,7 @@ public class shipSpawn : MonoBehaviour
                     {
                     //shipMover(j);
                     shipArray[j].SetActive(true);
+                    shipsOut++;
                     //canSpawn = false;
 
                     }

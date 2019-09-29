@@ -11,15 +11,16 @@ public class MoveShip : MonoBehaviour
     public float shipSpeed = .2f;
     public enum shipStatus
     {
+        readyToLaunch,
         goingToStation,
         locked,
-        waitngOnLoad,
-        ready
+        waitingOnLoad,
+        headHome
 
     }
 
     public shipStatus currentShipStatus;
-
+    int checkShipsOut = GameObject.Find("SHIP").GetComponent<shipSpawn>().shipsOut;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,8 @@ public class MoveShip : MonoBehaviour
         startPosition = transform.position;
         Debug.Log(startPosition);
         currentShipStatus = shipStatus.goingToStation;
-        
+      
+
     }
 
     // Update is called once per frame
@@ -38,13 +40,13 @@ public class MoveShip : MonoBehaviour
 
         RaycastHit hit;
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.up *-1) * 50, Color.red);
-        if (Physics.Raycast(this.transform.position, this.transform.up *-1, out hit, 3 ) && currentShipStatus != shipStatus.ready)
+        if (Physics.Raycast(this.transform.position, this.transform.up *-1, out hit, 3 ) && currentShipStatus != shipStatus.headHome)
         {
            
             if (hit.collider.gameObject.tag == "Wall")
             {
                
-                currentShipStatus = shipStatus.waitngOnLoad;
+                currentShipStatus = shipStatus.waitingOnLoad;
 
              } 
          } else
@@ -56,16 +58,24 @@ public class MoveShip : MonoBehaviour
             }
         }
 
-        if (currentShipStatus == shipStatus.ready)
+        if (currentShipStatus == shipStatus.headHome)
         {
-            transform.position = Vector3.MoveTowards(transform.position, startPosition, 0.5f);
-            Debug.Log("Coing Home");
+            if (transform.position != startPosition)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, startPosition, 0.5f);
+                Debug.Log("Going Home");
+            }
+            else
+            {
+                checkShipsOut--;
+                currentShipStatus = shipStatus.readyToLaunch;
+            }
         }
 
     }
 
     public void goingHome()
     {
-        currentShipStatus = shipStatus.ready;
+        currentShipStatus = shipStatus.headHome;
     }
 }

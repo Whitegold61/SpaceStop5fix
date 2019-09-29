@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 1961914192157544358}
   - component: {fileID: 2182192648560954536}
   - component: {fileID: 8660043185448242089}
-  - component: {fileID: 22560997121939539}
-  - component: {fileID: -604104108485948667}
+  - component: {fileID: 8846843484367553392}
   m_Layer: 0
   m_Name: SHIP
   m_TagString: Untagged
@@ -115,7 +114,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &22560997121939539
+--- !u!114 &8846843484367553392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,29 +123,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6385194403616913599}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a141d3c6976ab04aa59b129952ef615, type: 3}
+  m_Script: {fileID: 11500000, guid: c48cae0e63738c042bc712490d7e58c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasCollided: 0
-  gatepos: {fileID: 0}
-  ShipReturnPoint:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
---- !u!54 &-604104108485948667
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6385194403616913599}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  startPosition: {x: 0, y: 0, z: 0}
+  center: {x: 0, y: 0, z: 0}
+  targetDistance: 1000
+  isMoving: 0
+  shipSpeed: 0.2
+  currentShipStatus: 0
