@@ -7,6 +7,7 @@ public class Microwave : MonoBehaviour
     public float cookTime, explodeTime, currentTime, explosiveForce, explosiveRadius, upForce;
     public string itemName;
 
+    public bool overcooked;
     public bool isCooking;
     public bool isBroken;
     public Transform dispensePoint;
@@ -30,13 +31,15 @@ public class Microwave : MonoBehaviour
         if (isCooking && !isBroken)
         {
             currentTime += Time.deltaTime;
-            if (currentTime >= explodeTime)
+            if (currentTime >= explodeTime && overcooked)
             {
                 Explode();
             }
             if(currentTime > cookTime)
             {
-                lightSpeed += Time.deltaTime;
+                overcooked = true;
+                myLight.color = Color.Lerp(Color.green, Color.red , currentTime/explodeTime);
+                lightSpeed += Time.deltaTime*5;
             }
             if (myLight.intensity < maxIntensity && lightUp)
             {
@@ -103,6 +106,7 @@ public class Microwave : MonoBehaviour
                 }
             }
             
+            overcooked = false;
             isCooking = false;
             itemName = null;
         }
@@ -124,24 +128,31 @@ public class Microwave : MonoBehaviour
                 rigidbody.AddExplosionForce(explosiveForce, this.transform.position, explosiveRadius, upForce, ForceMode.Impulse);
             }
         }
+        
+        overcooked = false;
         isCooking = false;
         itemName = null;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.GetComponent<Item>() != null)
+         if(collision.gameObject.GetComponent<Item>() != null)
         {
-            if (collision.gameObject.GetComponent<Item>().isCooked == false)
+            Debug.Log("asdfljasl;fkajsd;lf");
+
+            if (collision.gameObject.GetComponent<Item>().isCooked == false && isCooking == false)
             {
+                
                 cookTime = collision.gameObject.GetComponent<Item>().cookTime;
                 explodeTime = collision.gameObject.GetComponent<Item>().explodeTime;
                 itemName = collision.gameObject.GetComponent<Item>().itemName;
                 currentTime = 0f;
                 isCooking = true;
+                //collision.gameObject.GetComponent<Rigidbody>().isKinematic = true;
                 Destroy(collision.gameObject);
             }
         }
+        
     }
 }
 
