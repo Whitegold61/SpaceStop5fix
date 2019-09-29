@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6222985770560834255}
   - component: {fileID: 3100581187099947257}
   - component: {fileID: 8663785773819104256}
+  - component: {fileID: 3633379016730605010}
+  - component: {fileID: 3947994494519315206}
   m_Layer: 0
   m_Name: crate_blue
   m_TagString: Untagged
@@ -78,3 +80,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &3633379016730605010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6919540371680671964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83de8d7e0e9003a458d99b27b2021ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+--- !u!65 &3947994494519315206
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6919540371680671964}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 162.79134, y: 81.110306, z: 160.18454}
+  m_Center: {x: -1.5372959, y: 5.148828, z: 0.55668235}

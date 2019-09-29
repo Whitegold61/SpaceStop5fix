@@ -12,8 +12,11 @@ GameObject:
   - component: {fileID: 4733164802218259287}
   - component: {fileID: 1338445555374886830}
   - component: {fileID: 6433130863727916389}
+  - component: {fileID: 4202281224113612610}
+  - component: {fileID: 8478712858164304518}
+  - component: {fileID: 3938142180693872445}
   m_Layer: 0
-  m_Name: Capsule_yellow
+  m_Name: ItemYellowCooked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 770057436424846194}
   m_LocalRotation: {x: -0, y: 0.54510856, z: -0, w: 0.8383655}
   m_LocalPosition: {x: 3.306, y: 0.508, z: -0.121}
-  m_LocalScale: {x: 0.0046806033, y: 0.006884611, z: 0.0046806033}
+  m_LocalScale: {x: 0.010694235, y: 0.015729947, z: 0.010694235}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -88,8 +91,54 @@ MeshCollider:
   m_GameObject: {fileID: 770057436424846194}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -9114703323446395147, guid: 71b6abfbf22dfd24d94b71d1265550a7, type: 3}
+--- !u!114 &4202281224113612610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770057436424846194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8afb768e00076b44fa6d4743529ef4df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cookTime: 0
+  explodeTime: 0
+  itemName: ItemYellowCooked
+  timeCooked: 0
+  isCooked: 1
+--- !u!54 &8478712858164304518
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770057436424846194}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &3938142180693872445
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770057436424846194}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 23.051268, y: 53.360386, z: 23.05126}
+  m_Center: {x: 0, y: 0, z: 0}

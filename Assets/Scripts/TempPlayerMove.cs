@@ -56,7 +56,7 @@ public class TempPlayerMove : MonoBehaviour
                 }
                 else if(isHolding)
                 {
-                    heldItem.transform.rotation = this.transform.rotation;
+                    
                     heldItem.transform.parent = null;
                     heldItem.GetComponent<BoxCollider>().enabled = true;
                     heldItem.GetComponent<Rigidbody>().isKinematic = false;
@@ -79,6 +79,7 @@ public class TempPlayerMove : MonoBehaviour
             if (hit.transform.gameObject.GetComponent<Item>() != null)
             {
                 hit.transform.gameObject.GetComponent<Item>().PickUp(this.gameObject);
+                heldItem.transform.rotation = this.transform.rotation;
                 isHolding = true;
             }
 

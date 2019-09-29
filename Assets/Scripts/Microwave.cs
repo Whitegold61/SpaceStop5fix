@@ -91,16 +91,16 @@ public class Microwave : MonoBehaviour
             {
                 switch (itemName)
                 {
-                    case "ItemA":
-                        droppedItem = Instantiate(Resources.Load("ItemACooked", typeof(GameObject))) as GameObject;
+                    case "ItemBlue":
+                        droppedItem = Instantiate(Resources.Load("ItemBlueCooked", typeof(GameObject))) as GameObject;
                         droppedItem.transform.position = dispensePoint.position;
                         break;
-                    case "ItemB":
-                        droppedItem = Instantiate(Resources.Load("ItemBCooked", typeof(GameObject))) as GameObject;
+                    case "ItemRed":
+                        droppedItem = Instantiate(Resources.Load("ItemRedCooked", typeof(GameObject))) as GameObject;
                         droppedItem.transform.position = dispensePoint.position;
                         break;
-                    case "ItemC":
-                        droppedItem = Instantiate(Resources.Load("ItemCCooked", typeof(GameObject))) as GameObject;
+                    case "ItemYellow":
+                        droppedItem = Instantiate(Resources.Load("ItemYellowCooked", typeof(GameObject))) as GameObject;
                         droppedItem.transform.position = dispensePoint.position;
                         break;
                 }
