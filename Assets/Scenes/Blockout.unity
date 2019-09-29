@@ -707,7 +707,7 @@ GameObject:
   - component: {fileID: 283833503}
   m_Layer: 0
   m_Name: Door2
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1134,6 +1134,7 @@ MonoBehaviour:
   - {fileID: 0}
   canSpawn: 1
   randships: 00000000000000000000000000000000
+  shipsOut: 0
 --- !u!1001 &428890732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1558,7 +1559,7 @@ GameObject:
   - component: {fileID: 488667375}
   m_Layer: 0
   m_Name: Doors (2)
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1672,7 +1673,7 @@ GameObject:
   - component: {fileID: 630029456}
   m_Layer: 0
   m_Name: Door3
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1856,7 +1857,7 @@ GameObject:
   - component: {fileID: 792165302}
   m_Layer: 0
   m_Name: Doors
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3412,7 +3413,7 @@ GameObject:
   - component: {fileID: 1320876693}
   m_Layer: 0
   m_Name: Doors (1)
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3544,6 +3545,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door_right_combined_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113516675314252078, guid: 8772e03cd9ae7ea4eb9ac1fd688b8292,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 1102674131890375485, guid: 8772e03cd9ae7ea4eb9ac1fd688b8292,
         type: 3}
@@ -3854,6 +3860,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlideDoor_2
       objectReference: {fileID: 0}
+    - target: {fileID: 2196783180180816150, guid: 3496fa4ba20ea134388a5faf0f724231,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 2196783180180816151, guid: 3496fa4ba20ea134388a5faf0f724231,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3908,6 +3919,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015122035697364088, guid: 3496fa4ba20ea134388a5faf0f724231,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880568995532187632, guid: 3496fa4ba20ea134388a5faf0f724231,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880568996035148894, guid: 3496fa4ba20ea134388a5faf0f724231,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3496fa4ba20ea134388a5faf0f724231, type: 3}
@@ -4312,6 +4338,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door_left_combined_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284097922594604664, guid: 7df3371be72ef0c4d9311b71a5b3c324,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2848897957842351211, guid: 7df3371be72ef0c4d9311b71a5b3c324,
         type: 3}
@@ -4752,7 +4783,7 @@ GameObject:
   - component: {fileID: 1814255874}
   m_Layer: 0
   m_Name: Door4
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5043,6 +5074,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lever_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725619692868860262, guid: feeb8649c2c141d43957e53ae8a806ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8731957540578593653, guid: feeb8649c2c141d43957e53ae8a806ba,
         type: 3}
@@ -6042,7 +6078,7 @@ PrefabInstance:
     - target: {fileID: 2196783180180816150, guid: 3496fa4ba20ea134388a5faf0f724231,
         type: 3}
       propertyPath: m_TagString
-      value: Wall
+      value: WallScript
       objectReference: {fileID: 0}
     - target: {fileID: 2196783180180816151, guid: 3496fa4ba20ea134388a5faf0f724231,
         type: 3}
@@ -6099,16 +6135,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6558998521447568867, guid: 3496fa4ba20ea134388a5faf0f724231,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.174
-      objectReference: {fileID: 0}
-    - target: {fileID: 6558998521447568867, guid: 3496fa4ba20ea134388a5faf0f724231,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.321
-      objectReference: {fileID: 0}
     - target: {fileID: 2015122035697364088, guid: 3496fa4ba20ea134388a5faf0f724231,
         type: 3}
       propertyPath: m_IsActive
@@ -6119,16 +6145,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
-    - target: {fileID: 3291145101972823659, guid: 3496fa4ba20ea134388a5faf0f724231,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.067
-      objectReference: {fileID: 0}
-    - target: {fileID: 3291145101972823659, guid: 3496fa4ba20ea134388a5faf0f724231,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.211
-      objectReference: {fileID: 0}
     - target: {fileID: 7880568995532187632, guid: 3496fa4ba20ea134388a5faf0f724231,
         type: 3}
       propertyPath: m_TagString
@@ -6138,6 +6154,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558998521447568867, guid: 3496fa4ba20ea134388a5faf0f724231,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558998521447568867, guid: 3496fa4ba20ea134388a5faf0f724231,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.321
+      objectReference: {fileID: 0}
+    - target: {fileID: 3291145101972823659, guid: 3496fa4ba20ea134388a5faf0f724231,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.067
+      objectReference: {fileID: 0}
+    - target: {fileID: 3291145101972823659, guid: 3496fa4ba20ea134388a5faf0f724231,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.211
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3496fa4ba20ea134388a5faf0f724231, type: 3}
@@ -6257,6 +6293,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113516675314252078, guid: 8772e03cd9ae7ea4eb9ac1fd688b8292,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 1102674131890375485, guid: 8772e03cd9ae7ea4eb9ac1fd688b8292,
         type: 3}
@@ -6545,6 +6586,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door_left_combined_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284097922594604664, guid: 7df3371be72ef0c4d9311b71a5b3c324,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2848897957842351211, guid: 7df3371be72ef0c4d9311b71a5b3c324,
         type: 3}

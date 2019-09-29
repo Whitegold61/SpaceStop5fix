@@ -12,11 +12,15 @@ public class shipSpawn : MonoBehaviour
     public bool canSpawn = true;
     public int[] randships = new int[4];
     public int shipsOut;
+    private MoveShip MoveShip;
+    
 
 
     // Start is called before the first frame update
     void Start()
     {
+       
+        
 
         shipArray[0] = Instantiate(spawnShip, shipSpawnPoints[0], Quaternion.Euler(new Vector3(90, 0, 45)));
 
@@ -34,8 +38,9 @@ public class shipSpawn : MonoBehaviour
         // Instantiate(spawnShip, shipSpawnPoints[0], Quaternion.Euler(new Vector3(90, 0, 45)));
 
         waveLaunch();
-
+        MoveShip = GameObject.Find("SHIP").GetComponent<MoveShip>();
     }
+    /*
     public void SetCanSpawn()
     {
          canSpawn = true;
@@ -47,9 +52,9 @@ public class shipSpawn : MonoBehaviour
 
         }
         
-        waveLaunch();
+        waveLaunch();}*/
         
-}
+
 
    public void waveLaunch()
     {
