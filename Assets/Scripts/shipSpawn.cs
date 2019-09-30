@@ -12,15 +12,13 @@ public class shipSpawn : MonoBehaviour
     public bool canSpawn = true;
     public int[] randships = new int[4];
     public int shipsOut;
-    private MoveShip MoveShip;
-    
+    private MoveShip _moveShip;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-       
-        
 
         shipArray[0] = Instantiate(spawnShip, shipSpawnPoints[0], Quaternion.Euler(new Vector3(90, 0, 45)));
 
@@ -36,10 +34,10 @@ public class shipSpawn : MonoBehaviour
         //public GameObject cube3 = GameObject.CreatePrimitive(PrimitiveType.Cube);
         //  cube3.transform.position = new Vector3(-3.67, 1.6f, -5f);
         // Instantiate(spawnShip, shipSpawnPoints[0], Quaternion.Euler(new Vector3(90, 0, 45)));
-
-        waveLaunch();
-        MoveShip = GameObject.Find("SHIP").GetComponent<MoveShip>();
+        //waveLaunch();
     }
+
+}
     /*
     public void SetCanSpawn()
     {
@@ -52,23 +50,29 @@ public class shipSpawn : MonoBehaviour
 
         }
         
-        waveLaunch();}*/
-        
+        waveLaunch();}
 
+   
 
    public void waveLaunch()
     {
-        if (canSpawn) { 
-          //  public int[] randships = new int[4];
+
+      
+         
+
+       
+
+        Debug.Log("PreLaunch");
+          //public int[] randships = new int[4];
             randships[0] = Random.Range(1, 2);
             randships[1] = Random.Range(0, 2);
             randships[2] = Random.Range(0, 2);
             randships[3] = Random.Range(0, 2);
+        Debug.Log("PostLaunch");
 
+        _moveShip = GameObject.Find("SHIP").GetComponent<MoveShip>();
 
-
-
-            for (int j = 0; j < randships.Length;j++)
+        for (int j = 0; j < randships.Length;j++)
             {
                 
                     if (randships[j] == 1)
@@ -85,11 +89,27 @@ public class shipSpawn : MonoBehaviour
             }
 
             }
-        }
+        
+    
+    public void degrementValue()
+    {
+        shipsOut--;
+        Debug.Log("MINUS");
+    }
     
     // Update is called once per frame
     void Update()
     {
-        
+      /*8  if (shipsOut < 1)
+        {
+
+            foreach (GameObject ships in shipArray)
+            {
+                ships.SetActive(false);
+            }
+
+            waveLaunch();
+        }
     }
 }
+*/

@@ -11,6 +11,7 @@ public class MoveShip : MonoBehaviour
     public float shipSpeed = .2f;
     private shipSpawn shipSpawn;
     public bool CanLaunchWave;
+   
 
     public int checkShipsOut;
     public enum shipStatus
@@ -30,14 +31,15 @@ public class MoveShip : MonoBehaviour
     
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         startPosition = transform.position;
         Debug.Log(startPosition);
         currentShipStatus = shipStatus.goingToStation;
-        shipSpawn = GameObject.FindGameObjectWithTag("WallScript").GetComponent<shipSpawn>();
+       // shipSpawn = GameObject.FindGameObjectWithTag("WallScript").GetComponent<shipSpawn>();
         //checkShipsOut = GameObject.Find("SHIP").GetComponent<shipSpawn>().shipsOut;
        //checkShipsOut = shipSpawn.shipsOut;
+      
 
     }
 
@@ -46,10 +48,10 @@ public class MoveShip : MonoBehaviour
     {
 
 
-       checkShipsOut = shipSpawn.shipsOut;
+        //checkShipsOut = shipSpawn.shipsOut;
         RaycastHit hit;
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.up * -1) * 50, Color.red);
-        if (Physics.Raycast(this.transform.position, this.transform.up * -1, out hit, 3) && currentShipStatus != shipStatus.headHome)
+        if (Physics.Raycast(this.transform.position, this.transform.up * -1, out hit, .5f) && currentShipStatus != shipStatus.headHome)
         {
 
             if (hit.collider.gameObject.tag == "Wall" ^ hit.collider.gameObject.tag =="WallScript")
@@ -77,21 +79,23 @@ public class MoveShip : MonoBehaviour
             }
             else
             {
-                checkShipsOut--;
-                currentShipStatus = shipStatus.readyToLaunch;
+               // shipSpawn.degrementValue();
+                currentShipStatus = shipStatus.goingToStation;
+                
                 
             }
         }
 
-        
+        /*
         if (checkShipsOut < 1)
         {
             shipSpawn.waveLaunch();
         }
-
+        */
     }
     public void goingHome()
     {
         currentShipStatus = shipStatus.headHome;
+        Debug.Log("going home");
     }
 }

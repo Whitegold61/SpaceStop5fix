@@ -2,16 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SessionManager : MonoBehaviour
 {
+
+    
     public static float speedMultiplier;
     public static bool isSlowed;
 
     public float countDownTime;
     public float normalSpeed;
     public float reducedSpeed;
+    public int score;
 
+    public Text scoreText;
     public Text countDownText;
 
     // Start is called before the first frame update
@@ -23,9 +28,23 @@ public class SessionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        countDownTime -= Time.deltaTime;
-        //countDownText.text = Mathf.Round(countDownTime).ToString();
 
+        if(Input.GetKeyDown(KeyCode.R)){
+
+            SceneManager.LoadScene(0);
+            Time.timeScale = 1f;
+            countDownTime = 60;
+            score = 0;
+            
+        }
+        countDownTime -= Time.deltaTime;
+        countDownText.text = "Time: " + Mathf.Round(countDownTime).ToString();
+        scoreText.text = "Score: " + score.ToString();
+
+        if(countDownTime < 1){
+            Time.timeScale = 0f;
+
+        }
     }
 
     public void ChangeSpeed()
@@ -40,5 +59,10 @@ public class SessionManager : MonoBehaviour
         {
             speedMultiplier = normalSpeed;
         }
+    }
+
+    public void IncreaseScore(int points)
+    {
+        score += points;
     }
 }
