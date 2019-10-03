@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8327713160985309627}
   m_Layer: 0
   m_Name: ItemRedCooked
-  m_TagString: readyFood
+  m_TagString: FluidReady
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

@@ -37,7 +37,7 @@ public class GateScript : MonoBehaviour
             animatorDoorR.SetBool("open", true);
             */
 
-            if (other.gameObject.tag == "readyFood")
+           /* if (other.gameObject.tag == "readyFood")
             {
                 Destroy(other.gameObject);
                 _localscore += 100;
@@ -49,7 +49,7 @@ public class GateScript : MonoBehaviour
                     GameObject.Find("SHIP").GetComponent<MoveShip>().goingHome();
                 }
 
-            }
+            }*/
         }
 
         
@@ -61,6 +61,10 @@ public class GateScript : MonoBehaviour
         {
             animatorDoorL.SetBool("open", true);
             animatorDoorR.SetBool("open", true);
+        } else
+        {
+            animatorDoorL.SetBool("open", false);
+            animatorDoorR.SetBool("open", false);
         }
 
 

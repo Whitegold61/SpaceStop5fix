@@ -11,6 +11,9 @@ TagManager:
   - Wall
   - WallScript
   - readyFood
+  - WaterReady
+  - FluidReady
+  - FoodReady
   layers:
   - Default
   - TransparentFX

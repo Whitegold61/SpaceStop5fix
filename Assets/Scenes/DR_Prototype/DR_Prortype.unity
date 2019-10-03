@@ -250,6 +250,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &57157521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1234313032145584455, guid: db2acd201cf233341934b9a19fbb2e63,
+    type: 3}
+  m_PrefabInstance: {fileID: 1863763754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &69170250
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,6 +991,12 @@ Transform:
   m_Father: {fileID: 1756758147}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &300425882 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 18004101347391040, guid: 3496fa4ba20ea134388a5faf0f724231,
+    type: 3}
+  m_PrefabInstance: {fileID: 1587250618}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &302165975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1001,6 +1013,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113516675314252078, guid: 8772e03cd9ae7ea4eb9ac1fd688b8292,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 1102674131890375485, guid: 8772e03cd9ae7ea4eb9ac1fd688b8292,
         type: 3}
@@ -1325,10 +1342,22 @@ BoxCollider:
   m_GameObject: {fileID: 357796584}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.2443881, y: 1.1066103, z: 1}
   m_Center: {x: -0.87963355, y: -0.29669487, z: -1.31}
+--- !u!1 &370973410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1234313032145584455, guid: db2acd201cf233341934b9a19fbb2e63,
+    type: 3}
+  m_PrefabInstance: {fileID: 6797152225895324799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &431400065 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 18004101347391040, guid: 3496fa4ba20ea134388a5faf0f724231,
+    type: 3}
+  m_PrefabInstance: {fileID: 1591328718}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &452437428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1587,6 +1616,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5025447680252698009, guid: 90c11f6d5a27b19419d24c73f9dde515,
     type: 3}
   m_PrefabInstance: {fileID: 462874740}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &478572131 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8269293948584414780, guid: 3496fa4ba20ea134388a5faf0f724231,
+    type: 3}
+  m_PrefabInstance: {fileID: 1521134576}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &483880877
 GameObject:
@@ -1855,6 +1890,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b4cb1750bb925a429bbf34f65a33f2c, type: 3}
+--- !u!95 &615446030 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8269293948584414780, guid: 3496fa4ba20ea134388a5faf0f724231,
+    type: 3}
+  m_PrefabInstance: {fileID: 1587250618}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &630029455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,6 +2285,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door_right_combined_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113516675314252078, guid: 8772e03cd9ae7ea4eb9ac1fd688b8292,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 1102674131890375485, guid: 8772e03cd9ae7ea4eb9ac1fd688b8292,
         type: 3}
@@ -2860,6 +2906,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 968636276}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &974772182 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1234313032145584455, guid: db2acd201cf233341934b9a19fbb2e63,
+    type: 3}
+  m_PrefabInstance: {fileID: 644731187}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &978303433
 GameObject:
   m_ObjectHideFlags: 0
@@ -3104,6 +3156,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door_left_combined_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284097922594604664, guid: 7df3371be72ef0c4d9311b71a5b3c324,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2848897957842351211, guid: 7df3371be72ef0c4d9311b71a5b3c324,
         type: 3}
@@ -3425,6 +3482,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d8916bfbe5eb9c4dbbd5eb152ac6ecb, type: 3}
+--- !u!1 &1167739983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1234313032145584455, guid: db2acd201cf233341934b9a19fbb2e63,
+    type: 3}
+  m_PrefabInstance: {fileID: 2082938368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1179388965
 GameObject:
   m_ObjectHideFlags: 0
@@ -3455,6 +3518,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1179896565 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8269293948584414780, guid: 3496fa4ba20ea134388a5faf0f724231,
+    type: 3}
+  m_PrefabInstance: {fileID: 1591328718}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1196173307
 GameObject:
   m_ObjectHideFlags: 0
@@ -3504,6 +3573,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1210806473 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1234313032145584455, guid: db2acd201cf233341934b9a19fbb2e63,
+    type: 3}
+  m_PrefabInstance: {fileID: 1103723042}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1235032336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4019,6 +4094,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_right_combined_low
       objectReference: {fileID: 0}
+    - target: {fileID: 4113516675314252078, guid: 8772e03cd9ae7ea4eb9ac1fd688b8292,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 1102674131890375485, guid: 8772e03cd9ae7ea4eb9ac1fd688b8292,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4173,6 +4253,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door_left_combined_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284097922594604664, guid: 7df3371be72ef0c4d9311b71a5b3c324,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2848897957842351211, guid: 7df3371be72ef0c4d9311b71a5b3c324,
         type: 3}
@@ -4678,6 +4763,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2118909285, guid: 3496fa4ba20ea134388a5faf0f724231, type: 3}
+      propertyPath: switch2
+      value: 
+      objectReference: {fileID: 370973410}
+    - target: {fileID: 2118909285, guid: 3496fa4ba20ea134388a5faf0f724231, type: 3}
+      propertyPath: switch1
+      value: 
+      objectReference: {fileID: 974772182}
+    - target: {fileID: 2118909285, guid: 3496fa4ba20ea134388a5faf0f724231, type: 3}
+      propertyPath: animatorDoorR
+      value: 
+      objectReference: {fileID: 615446030}
+    - target: {fileID: 2118909285, guid: 3496fa4ba20ea134388a5faf0f724231, type: 3}
+      propertyPath: animatorDoorL
+      value: 
+      objectReference: {fileID: 300425882}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3496fa4ba20ea134388a5faf0f724231, type: 3}
 --- !u!1001 &1591328718
@@ -4767,8 +4868,19 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 8458236957555918978, guid: 3496fa4ba20ea134388a5faf0f724231,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3496fa4ba20ea134388a5faf0f724231, type: 3}
+--- !u!95 &1603159418 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 18004101347391040, guid: 3496fa4ba20ea134388a5faf0f724231,
+    type: 3}
+  m_PrefabInstance: {fileID: 1521134576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1603226705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4918,6 +5030,29 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c601503e8dda104fb45b07712260754, type: 3}
+--- !u!1 &1659466190 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7880568996035148894, guid: 3496fa4ba20ea134388a5faf0f724231,
+    type: 3}
+  m_PrefabInstance: {fileID: 1591328718}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1659466195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659466190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60423398ac7b7e42aff3a6523c37e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switch1: {fileID: 1210806473}
+  switch2: {fileID: 1682718092}
+  animatorDoorL: {fileID: 431400065}
+  animatorDoorR: {fileID: 1179896565}
+  _localscore: 0
 --- !u!1001 &1666789409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4987,6 +5122,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9624ec91032920e49a32d85fd9bd005c, type: 3}
+--- !u!1 &1682718092 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1234313032145584455, guid: db2acd201cf233341934b9a19fbb2e63,
+    type: 3}
+  m_PrefabInstance: {fileID: 1973449028}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1710622524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4998,6 +5139,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door_left_combined_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284097922594604664, guid: 7df3371be72ef0c4d9311b71a5b3c324,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2848897957842351211, guid: 7df3371be72ef0c4d9311b71a5b3c324,
         type: 3}
@@ -5146,6 +5292,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9624ec91032920e49a32d85fd9bd005c, type: 3}
+--- !u!1 &1750527728 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7880568996035148894, guid: 3496fa4ba20ea134388a5faf0f724231,
+    type: 3}
+  m_PrefabInstance: {fileID: 1521134576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1750527733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750527728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60423398ac7b7e42aff3a6523c37e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switch1: {fileID: 1167739983}
+  switch2: {fileID: 57157521}
+  animatorDoorL: {fileID: 1603159418}
+  animatorDoorR: {fileID: 478572131}
+  _localscore: 0
 --- !u!1 &1756758146
 GameObject:
   m_ObjectHideFlags: 0
@@ -6727,6 +6896,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4113516675314252078, guid: 8772e03cd9ae7ea4eb9ac1fd688b8292,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 1102674131890375485, guid: 8772e03cd9ae7ea4eb9ac1fd688b8292,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7083,6 +7257,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door_left_combined_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284097922594604664, guid: 7df3371be72ef0c4d9311b71a5b3c324,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2848897957842351211, guid: 7df3371be72ef0c4d9311b71a5b3c324,
         type: 3}

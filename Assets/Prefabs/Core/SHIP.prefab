@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1961914192157544358}
   - component: {fileID: 2182192648560954536}
   - component: {fileID: 8660043185448242089}
+  - component: {fileID: 4173075826531427778}
   - component: {fileID: 8846843484367553392}
   m_Layer: 0
   m_Name: SHIP
@@ -115,6 +116,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &4173075826531427778
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6385194403616913599}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.5173674, y: 4.355315, z: 1.9179677}
+  m_Center: {x: 0.13286485, y: 1.431305, z: -0.8696531}
 --- !u!114 &8846843484367553392
 MonoBehaviour:
   m_ObjectHideFlags: 0
