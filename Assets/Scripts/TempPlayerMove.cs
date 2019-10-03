@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,6 +33,9 @@ public class TempPlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        BackOnPosition();
+
         if (!isSeated)
         {
             //Player Movement
@@ -64,6 +68,14 @@ public class TempPlayerMove : MonoBehaviour
                     isHolding = false;
                 }
             }
+        }
+    }
+
+    private void BackOnPosition()
+    {
+        if (transform.position.y < -10)
+        {
+            transform.position = new Vector3(0, 0.65f, 0);
         }
     }
 
