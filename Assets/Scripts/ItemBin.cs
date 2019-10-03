@@ -28,6 +28,6 @@ public class ItemBin : MonoBehaviour
         player.GetComponent<TempPlayerMove>().heldItem = givenItem;
         player.GetComponent<TempPlayerMove>().isHolding = true;
 
-        Debug.Log("WE GOT HERE!!!");
+        //Debug.Log("WE GOT HERE!!!");
     }
 }

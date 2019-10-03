@@ -46,8 +46,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 48.558697, y: 83.095856, z: 16.279417}
-  m_Center: {x: -9.764388, y: -17.345507, z: 2.8631616}
+  m_Size: {x: 76.32497, y: 83.095856, z: 16.279417}
+  m_Center: {x: -23.647566, y: -17.345507, z: 2.863162}
 --- !u!114 &6797152226639858747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   light: {fileID: 2540452639414633582}
   isShipGateSwitch: 0
+  waitBeforeGamesWillClose: 4
 --- !u!1 &1836008366821973935
 GameObject:
   m_ObjectHideFlags: 0

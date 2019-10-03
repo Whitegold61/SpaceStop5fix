@@ -82,7 +82,8 @@ public class MoveShip : MonoBehaviour
             {
 
                 currentShipStatus = shipStatus.waitingOnLoad;
-                Debug.Log("HIT WALL");
+                isGoingHome = false;
+                //Debug.Log("HIT WALL");
 
             }
         }
@@ -156,7 +157,7 @@ public class MoveShip : MonoBehaviour
         }
         else if (other.tag == "FoodReady")
         {
-            Debug.Log("FoodObBoard");
+            Debug.Log("FoodOnBoard");
             Destroy(other.gameObject);
             _localscore += 114;
             _sm.IncreaseScore(_localscore);

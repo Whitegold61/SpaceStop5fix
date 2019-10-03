@@ -11,7 +11,7 @@ public class SessionManager : MonoBehaviour
     public static float speedMultiplier;
     public static bool isSlowed;
 
-    public float countDownTime;
+    public float gameTime;
     public float normalSpeed;
     public float reducedSpeed;
     public int score;
@@ -19,10 +19,15 @@ public class SessionManager : MonoBehaviour
     public Text scoreText;
     public Text countDownText;
 
+    private float countDownTime;
+
+    
     // Start is called before the first frame update
     void Start()
     {
+        countDownTime = gameTime;
         speedMultiplier = normalSpeed;
+
     }
 
     // Update is called once per frame
@@ -33,7 +38,7 @@ public class SessionManager : MonoBehaviour
 
             SceneManager.LoadScene(0);
             Time.timeScale = 1f;
-            countDownTime = 60;
+            countDownTime = gameTime;
             score = 0;
             
         }
@@ -41,8 +46,10 @@ public class SessionManager : MonoBehaviour
         countDownText.text = "Time: " + Mathf.Round(countDownTime).ToString();
         scoreText.text = "Score: " + score.ToString();
 
-        if(countDownTime < 1){
+        if(countDownTime < 0){
             Time.timeScale = 0f;
+            scoreText.text = "PRESS 'R' TO RESTART";
+            countDownText.text = "GAMEOVER";
 
         }
     }

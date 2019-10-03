@@ -56,7 +56,7 @@ public class GateScript : MonoBehaviour
    }
 
    void Update (){
-
+        
         if (switch1.GetComponent<ShipGateSwitch>().isShipGateSwitch == true && switch2.GetComponent<ShipGateSwitch>().isShipGateSwitch == true)
         {
             animatorDoorL.SetBool("open", true);
@@ -66,7 +66,7 @@ public class GateScript : MonoBehaviour
             animatorDoorL.SetBool("open", false);
             animatorDoorR.SetBool("open", false);
         }
-
+        
 
    }
 }

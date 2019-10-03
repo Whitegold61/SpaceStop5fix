@@ -15,7 +15,7 @@ public class ShipGateSwitch : MonoBehaviour
 
     private void Start()
     {
-        _moveShip = GameObject.Find("SHIP").GetComponent<MoveShip>();
+        _moveShip = GameObject.Find("SHIP(Clone)").GetComponent<MoveShip>();
     }
 
     void Update(){
@@ -25,7 +25,7 @@ public class ShipGateSwitch : MonoBehaviour
 
             light.color = Color.green;
 
-            StartCoroutine(timerSwithOFF());
+            StartCoroutine(timerSwitchOFF());
         }else{
             light.color = Color.red;
         }
@@ -45,11 +45,11 @@ public class ShipGateSwitch : MonoBehaviour
         isShipGateSwitch = false;
     }
 
-    IEnumerator timerSwithOFF()
+    IEnumerator timerSwitchOFF()
     {
         yield return new WaitForSeconds(waitBeforeGamesWillClose);
         swithesToOFF();
-        Debug.Log("SWITCH OFF");
+        //Debug.Log("SWITCH OFF");
     }
 
 }

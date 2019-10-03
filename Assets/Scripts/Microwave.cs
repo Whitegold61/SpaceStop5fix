@@ -11,6 +11,7 @@ public class Microwave : MonoBehaviour
     public bool isCooking;
     public bool isBroken;
     public Transform dispensePoint;
+    public GameObject explosionParticle;
 
     private float currentRepair = 0f, repairRate = 10, degradeRate = 1;
 
@@ -73,6 +74,7 @@ public class Microwave : MonoBehaviour
             currentTime = 0f;
             lightSpeed = 1f;
             myLight.intensity = Mathf.Clamp(myLight.intensity - (Time.deltaTime * 3), 0, 100);
+            if(myLight.intensity == 0 ) myLight.color = Color.red;
         }
     }
 
@@ -119,6 +121,8 @@ public class Microwave : MonoBehaviour
 
     private void Explode()
     {
+        GameObject particle = Instantiate(explosionParticle, this.transform.position, this.transform.rotation);
+        Destroy(particle, 3f);
         Collider[] colliders = Physics.OverlapSphere(this.transform.position, explosiveRadius);
         foreach (Collider hit in colliders)
         {
@@ -138,7 +142,7 @@ public class Microwave : MonoBehaviour
     {
          if(collision.gameObject.GetComponent<Item>() != null)
         {
-            Debug.Log("asdfljasl;fkajsd;lf");
+            //Debug.Log("asdfljasl;fkajsd;lf");
 
             if (collision.gameObject.GetComponent<Item>().isCooked == false && isCooking == false)
             {

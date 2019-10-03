@@ -13,12 +13,15 @@ public class TempPlayerMove : MonoBehaviour
     public Transform carryPoint;
     public GameObject heldItem;
 
+
     private Animator anime;
 
     private Camera mainCam;
     private Vector3 camForward, camRight, movement;
     private Vector3 groundNormal = Vector3.up;
     private float moveV, moveH;
+    private bool isBeingCarried;
+    private GameObject carrier;
 
 
     RaycastHit hit;
@@ -38,32 +41,56 @@ public class TempPlayerMove : MonoBehaviour
 
         if (!isSeated)
         {
-            //Player Movement
-            Vector3 movement = new Vector3( Input.GetAxisRaw(playerNumber + "Horizontal"), 0f, Input.GetAxisRaw(playerNumber + "Vertical"));
-            movement.Normalize();
-            this.transform.position += movement * Time.deltaTime * movementSpeed * SessionManager.speedMultiplier;
-            //playerMovement();
-
-             
-            Vector3 lookDirection = new Vector3(Input.GetAxisRaw(playerNumber + "Horizontal"), 0, Input.GetAxisRaw(playerNumber + "Vertical"));
-            if (lookDirection != new Vector3(0, 0, 0))
+            if (isBeingCarried == false)
             {
-                transform.rotation = Quaternion.LookRotation(lookDirection);
-                
+                //Player Movement
+                Vector3 movement = new Vector3(Input.GetAxisRaw(playerNumber + "Horizontal"), 0f, Input.GetAxisRaw(playerNumber + "Vertical"));
+                movement.Normalize();
+                this.transform.position += movement * Time.deltaTime * movementSpeed * SessionManager.speedMultiplier;
+                //playerMovement();
+
+
+                Vector3 lookDirection = new Vector3(Input.GetAxisRaw(playerNumber + "Horizontal"), 0, Input.GetAxisRaw(playerNumber + "Vertical"));
+                if (lookDirection != new Vector3(0, 0, 0))
+                {
+                    transform.rotation = Quaternion.LookRotation(lookDirection);
+
+                }
             }
             
             if (Input.GetButtonDown(playerNumber + "Interact"))
             {
+                //make the carrier drop you if you press interact
+                if (isBeingCarried == true)
+                {
+                    this.transform.parent = null;
+                    this.GetComponent<MeshCollider>().enabled = true;
+                    this.GetComponent<Rigidbody>().isKinematic = false;
+                    carrier.GetComponent<TempPlayerMove>().isHolding = false;
+                    carrier.GetComponent<TempPlayerMove>().heldItem = null;
+                    isBeingCarried = false;
+                }
+                //if not holding, interact with stuff, else drop what you're holding
                 if (!isHolding)
                 {
                     InteractWith();
+                    
                 }
                 else if(isHolding)
                 {
                     
                     heldItem.transform.parent = null;
-                    heldItem.GetComponent<BoxCollider>().enabled = true;
-                    heldItem.GetComponent<Rigidbody>().isKinematic = false;
+                    if (heldItem.CompareTag("Player")==true){
+                        heldItem.GetComponent<MeshCollider>().enabled = true;
+                        heldItem.GetComponent<Rigidbody>().isKinematic = false;
+                        heldItem.GetComponent<TempPlayerMove>().isBeingCarried = false;
+                    }
+                    else
+                    {
+                        heldItem.GetComponent<BoxCollider>().enabled = true;
+                        heldItem.GetComponent<Rigidbody>().isKinematic = false;
+                    }
+                    
                     heldItem = null;
                     isHolding = false;
                 }
@@ -113,6 +140,28 @@ public class TempPlayerMove : MonoBehaviour
                 Debug.Log("DETECTED");
                 hit.transform.gameObject.GetComponent<ItemBin>().GiveItem(this.gameObject);
             }
+
+            if (hit.transform.gameObject.CompareTag("Player") == true)
+            {
+                //Debug.Log("made it this far");
+                GameObject foundPlayer = hit.transform.gameObject;
+                heldItem = foundPlayer;
+                //set found player to being carried by this object
+                foundPlayer.GetComponent<TempPlayerMove>().carrier = this.gameObject;
+                foundPlayer.GetComponent<TempPlayerMove>().isBeingCarried = true;
+
+                foundPlayer.transform.position = this.gameObject.GetComponent<TempPlayerMove>().carryPoint.position + new Vector3(0, 0.2f,0);
+                foundPlayer.transform.parent = this.gameObject.transform;
+                foundPlayer.transform.rotation = this.transform.rotation;
+                foundPlayer.GetComponent<Rigidbody>().isKinematic = true;
+                foundPlayer.GetComponent<MeshCollider>().enabled = false;
+                
+                isHolding = true;
+                
+
+
+            }
+
         }
     }
 /*

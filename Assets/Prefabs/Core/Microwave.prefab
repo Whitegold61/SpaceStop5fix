@@ -189,7 +189,7 @@ MonoBehaviour:
   cookTime: 0
   explodeTime: 0
   currentTime: 0
-  explosiveForce: 10
+  explosiveForce: 15
   explosiveRadius: 10
   upForce: 1
   itemName: 
@@ -197,6 +197,8 @@ MonoBehaviour:
   isCooking: 0
   isBroken: 0
   dispensePoint: {fileID: 379544373116022479}
+  explosionParticle: {fileID: 7653463809147812369, guid: 16289c042bdd99041904269476355aa8,
+    type: 3}
   maxIntensity: 3
   myLight: {fileID: 4584806444765082215}
 --- !u!65 &4762308511586016719
@@ -249,11 +251,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8770557585124919177}
     m_Modifications:
-    - target: {fileID: 4135060846138007873, guid: 26f7e95887f3c924f8c613f6a583ac01,
-        type: 3}
-      propertyPath: m_Name
-      value: Microwave_low 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1097178699070460754, guid: 26f7e95887f3c924f8c613f6a583ac01,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -323,6 +320,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 3.3518069
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135060846138007873, guid: 26f7e95887f3c924f8c613f6a583ac01,
+        type: 3}
+      propertyPath: m_Name
+      value: Microwave_low 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26f7e95887f3c924f8c613f6a583ac01, type: 3}
