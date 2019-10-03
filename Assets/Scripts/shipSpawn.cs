@@ -21,16 +21,23 @@ public class shipSpawn : MonoBehaviour
     {
 
         shipArray[0] = Instantiate(spawnShip, shipSpawnPoints[0], Quaternion.Euler(new Vector3(90, 0, 45)));
-
+        shipArray[0].name = "ship0";
+        shipArray[0].tag = "Ship";
         //  public GameObject cube0 = GameObject.CreatePrimitive(PrimitiveType.Cube);
         //  cube0.transform.position = new Vector3(-3.67f, 1.6f, 6);
         shipArray[1] = Instantiate(spawnShip, shipSpawnPoints[1], Quaternion.Euler(new Vector3(90, 0, -46)));
+        shipArray[1].name = "ship1";
+        shipArray[1].tag = "Ship";
         // public GameObject cube1 = GameObject.CreatePrimitive(PrimitiveType.Cube);
         //  cube1.transform.position = new Vector3(8.3f, 1.6f, 5.1f);
         shipArray[2] = Instantiate(spawnShip, shipSpawnPoints[2], Quaternion.Euler(new Vector3(90, 0, -134)));
+        shipArray[2].name = "ship2";
+        shipArray[2].tag = "Ship";
         //  public GameObject cube2 = GameObject.CreatePrimitive(PrimitiveType.Cube);
         //   cube2.transform.position = new Vector3(8f, 1.6f, -5);
         shipArray[3] = Instantiate(spawnShip, shipSpawnPoints[3], Quaternion.Euler(new Vector3(90, 0, 130)));
+        shipArray[3].name = "ship3";
+        shipArray[3].tag = "Ship";
         //public GameObject cube3 = GameObject.CreatePrimitive(PrimitiveType.Cube);
         //  cube3.transform.position = new Vector3(-3.67, 1.6f, -5f);
         // Instantiate(spawnShip, shipSpawnPoints[0], Quaternion.Euler(new Vector3(90, 0, 45)));
@@ -52,16 +59,8 @@ public class shipSpawn : MonoBehaviour
         
         waveLaunch();}
 
-   
-
    public void waveLaunch()
     {
-
-      
-         
-
-       
-
         Debug.Log("PreLaunch");
           //public int[] randships = new int[4];
             randships[0] = Random.Range(1, 2);
@@ -73,22 +72,18 @@ public class shipSpawn : MonoBehaviour
         _moveShip = GameObject.Find("SHIP").GetComponent<MoveShip>();
 
         for (int j = 0; j < randships.Length;j++)
+        {
+                
+            if (randships[j] == 1)
             {
-                
-                    if (randships[j] == 1)
+                //shipMover(j);
+                shipArray[j].SetActive(true);
+                shipsOut++;
+                //canSpawn = false;
 
-                    {
-                    //shipMover(j);
-                    shipArray[j].SetActive(true);
-                    shipsOut++;
-                    //canSpawn = false;
-
-                    }
-                
-                
+                } 
             }
-
-            }
+      }
         
     
     public void degrementValue()

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8846843484367553392}
   m_Layer: 0
   m_Name: SHIP
-  m_TagString: Untagged
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,8 +127,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.68, y: 4.07, z: 2.18}
-  m_Center: {x: 0.08, y: 1.63, z: -0.58}
+  m_Size: {x: 5.68, y: 4.0228086, z: 2.1800003}
+  m_Center: {x: 0.080000035, y: 1.6535963, z: -0.58}
 --- !u!114 &8846843484367553392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +147,15 @@ MonoBehaviour:
   isMoving: 0
   shipSpeed: 0.2
   CanLaunchWave: 0
+  _localscore: 0
+  isFoodLoaded: 0
+  isFluidLoaded: 0
+  isWaterLoaded: 0
+  isGoingHome: 0
+  red: {fileID: 2100000, guid: f82d19ab36550e8459c33031f57b69e8, type: 2}
+  blue: {fileID: 2100000, guid: d17369309ffc0de4e99632f78009d292, type: 2}
+  yellow: {fileID: 2100000, guid: 167fe99873c52ae40852453e36fb6e04, type: 2}
+  black: {fileID: 2100000, guid: fa50415e462a3ce4cb91f3a0ea789b8f, type: 2}
   checkShipsOut: 0
   currentShipStatus: 0
 --- !u!1001 &319929160535470771

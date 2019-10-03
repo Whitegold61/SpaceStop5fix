@@ -109,8 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afb768e00076b44fa6d4743529ef4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cookTime: 8
-  explodeTime: 13
+  cookTime: 4
+  explodeTime: 7
   itemName: ItemYellow
   timeCooked: 0
   isCooked: 0

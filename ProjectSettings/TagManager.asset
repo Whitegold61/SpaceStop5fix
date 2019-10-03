@@ -14,6 +14,7 @@ TagManager:
   - WaterReady
   - FluidReady
   - FoodReady
+  - Ship
   layers:
   - Default
   - TransparentFX

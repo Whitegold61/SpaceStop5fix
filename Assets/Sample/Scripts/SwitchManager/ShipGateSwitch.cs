@@ -9,13 +9,13 @@ public class ShipGateSwitch : MonoBehaviour
     public Light light;
     public bool isShipGateSwitch = false;
 
-    public float waitBeforeGamesWillClose = 4f;
+    public float waitBeforeGamesWillClose = 5f;
 
     
 
     private void Start()
     {
-        _moveShip = GameObject.Find("SHIP(Clone)").GetComponent<MoveShip>();
+        _moveShip = GameObject.FindGameObjectWithTag("Ship").GetComponent<MoveShip>();
     }
 
     void Update(){

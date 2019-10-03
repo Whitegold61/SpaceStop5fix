@@ -41,16 +41,16 @@ public class SessionManager : MonoBehaviour
             countDownTime = gameTime;
             score = 0;
             
-        }
-        countDownTime -= Time.deltaTime;
-        countDownText.text = "Time: " + Mathf.Round(countDownTime).ToString();
-        scoreText.text = "Score: " + score.ToString();
-
+        }   
+        
         if(countDownTime < 0){
             Time.timeScale = 0f;
             scoreText.text = "PRESS 'R' TO RESTART";
             countDownText.text = "GAMEOVER";
-
+        }else{
+            countDownTime -= Time.deltaTime;
+            countDownText.text = "Time: " + Mathf.Round(countDownTime).ToString();
+            scoreText.text = "Score: " + score.ToString();
         }
     }
 
@@ -58,12 +58,9 @@ public class SessionManager : MonoBehaviour
     {
         isSlowed = !isSlowed;
 
-        if (isSlowed)
-        {
+        if (isSlowed){
             speedMultiplier = reducedSpeed;
-        }
-        else
-        {
+        }else{
             speedMultiplier = normalSpeed;
         }
     }
